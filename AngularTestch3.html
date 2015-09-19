@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+
+<div id="chapter3" ng-app="myApp" ng-controller="myCtrl">
+	<p>Chapter 3: Angular JS Controllers using external Controllers</p>
+	First Name: <input type="text" ng-model="firstName"><br>
+	Last Name: <input type="text" ng-model="lastName"><br>
+	<br>
+	<p>Full Name: {{firstName + " " + lastName}}</p>
+	<p>Full Name using a function: {{fullName()}}</p>
+	<p>Display all names in Object Array with controller in external file:</p>
+	<ul>
+		<li ng-repeat="x in names">
+			{{ x.name + ' lives in ' + x.country }}
+		</li>
+	</ul>
+</div>
+
+<script src="personControllerch3.js"></script>
+
+</body>
+</html>
